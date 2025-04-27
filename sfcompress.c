@@ -99,11 +99,9 @@ double summ(LIST *probs)
 int minindex(size_t n, double mass[n])
 {
     int minindex = 0;
-    double min = mass[minindex];
     for (int i = 1; i < n; i++)
-        if (mass[i] < min)
+        if (mass[i] < mass[minindex])
         {
-            min = mass[i];
             minindex = i;
         }
     return minindex;
